@@ -1,4 +1,4 @@
-# Prueba_T-nica_SQL-Server-PowerBI
+# Analisis_de_creditos-SQL_Server-PowerBI
 Caso práctico basado en un escenario de análisis de créditos.
 ![Reporte gif guia](imagenes/GIF_REPORTE.gif)
 
