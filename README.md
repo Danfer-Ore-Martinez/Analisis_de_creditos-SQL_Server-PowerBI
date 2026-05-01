@@ -1,5 +1,5 @@
 # Prueba_T-nica_SQL-Server-PowerBI
-Desarrollo de Prueba Técnica para el puesto de Data Analyst.
+Caso práctico basado en un escenario de análisis de créditos.
 ![Reporte gif guia](imagenes/GIF_REPORTE.gif)
 
 ## Resumen del Dashboard
