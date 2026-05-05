@@ -19,7 +19,8 @@ Vista general del reporte, se logran alcanzar los siguientes objetivos:
 - **Gráficos Relevantes**: Se emplean **gráficos de barra** y **línea** para analizar comparacione.
 - **Diseño del Dashboard**: Se diseña una interfaz clara, intuitiva y visualmente amigable, priorizando la simplicidad y enfocando cada sección en los elementos más relevantes para el análisis.
 - **Reporte Interactivo**:
-  - **Filtros**: Implementación de filtros dinámicos por puesto de trabajo.
+  - **Filtros**: Implementación de filtros dinámicos por `Zona`, `Ubigeo`, `Producto`, `Año actual` y `Año comprar`
+  - **Filtros de Tiempo**: Implementación de filtros por rango de tiempo en este caso meses
 - **Vista de Modelo**: Modelado de datos mediante la relación entre la tabla princiapal `DESEMBOLSOS` y la tablas `MAESTRA_CLIENTES`, `MAESTRA_PRODUCTOS`, `UBIGEO` y `fecha_dim`. 
 - **DAX**: Desarrollo de cálculos avanzados utilizando `DAX`, para la creación de la tabla `periodo_fecha` y para crear tablas enteras como `fecha_dim`.
 - **Cálculos**: Implementación de medidas personalizadas mediante `Nuevo Calculo`, como `META_MENSUAL`, `diferencia`, `2021`, etc.
