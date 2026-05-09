@@ -6,7 +6,7 @@ Caso práctico basado en un escenario de análisis de créditos.
 Vista general del reporte, se logran alcanzar los siguientes objetivos: 
 - Que se pueda visualizar el avance de mes a mes.
 - Que se pueda comparar el avance de este año vs el año anterior.
-- Que se puedan comparar con las metas mensuales establecidas a inicial de año.
+- Que se puedan comparar con las metas mensuales establecidas a inicio de año.
 - Que se tengan filtros para visualizar por Zonal, Departamento y Producto.
 - Que se puedan visualizar los clientes TOP de desembolsos.
 - Que se puedan visualizar los clientes con mayor caída de desembolsos.
