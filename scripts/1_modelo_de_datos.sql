@@ -8,7 +8,7 @@ ADVERTENCIA:
 USE master;
 GO
 
--- Drop and recreate the 'DataWarehouseAnalytics' database
+-- Borra y crea la base de datos 'PT_Desembolsos'
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'PT_Desembolsos')
 BEGIN
     ALTER DATABASE PT_Desembolsos SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
