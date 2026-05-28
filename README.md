@@ -1,5 +1,5 @@
 # Analisis_de_creditos-SQL_Server-PowerBI
-Caso práctico basado en un escenario de análisis de créditos.
+Caso práctico basado en un escenario de desembolsos.
 ![Reporte gif guia](imagenes/GIF_REPORTE.gif)
 
 ## Resumen del Dashboard
