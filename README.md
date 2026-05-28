@@ -21,10 +21,10 @@ Vista general del reporte, se logran alcanzar los siguientes objetivos:
 - **Reporte Interactivo**:
   - **Filtros**: Implementación de filtros dinámicos por `Zona`, `Ubigeo`, `Producto`, `Año actual` y `Año comprar`
   - **Filtros de Tiempo**: Implementación de filtros por rango de tiempo en este caso meses
-- **Vista de Modelo**: Modelado de datos mediante la relación entre la tabla princiapal `DESEMBOLSOS` y la tablas `MAESTRA_CLIENTES`, `MAESTRA_PRODUCTOS`, `UBIGEO` y `fecha_dim`. 
+- **Vista de Modelo**: Modelado de datos mediante la relación entre la tabla princiapal `DESEMBOLSOS` y las tablas `MAESTRA_CLIENTES`, `MAESTRA_PRODUCTOS`, `UBIGEO` y `fecha_dim`. 
 - **DAX**: Desarrollo de cálculos avanzados utilizando `DAX`, para la creación de la tabla `periodo_fecha` y para crear tablas enteras como `fecha_dim`.
 - **Cálculos**: Implementación de medidas personalizadas mediante `Nuevo Calculo`, como `META_MENSUAL`, `diferencia`, `2021`, etc.
 - **Parámetros**: Uso de `Nuevo Parametro` para alternar entre métricas como `2020`,`2021`,`2022`,`2023` y `2024`, permitiendo la visualización dinámica en un mismo gráfico.
 - **Edición de Interacciones**: Se optimizan las interacciones entre las diferentes tablas con el objetivo de mejorar la dinámica y usabilidad del reporte, principalmente para limitar el filtro por año al grafico  `Desembolsos por Año`
 ## Sobre mi
-Buenos días, buenas tardes o buenas noches, dependiendo de cuando leas esto, soy un Estudiante de Ing. Sistemas mi nombre es Danfer Marcelo Ore,me quiero especializar en análisis de datos, este proyecto busca demostrar mi manejo en Power BI y SQL Server. (30/04/2026)
+Buenos días, buenas tardes o buenas noches, dependiendo de cuando leas esto, soy un Estudiante de Ing. Sistemas mi nombre es Danfer Marcelo Ore, me quiero especializar en análisis de datos, este proyecto busca demostrar mi manejo en Power BI y SQL Server. (30/04/2026)
