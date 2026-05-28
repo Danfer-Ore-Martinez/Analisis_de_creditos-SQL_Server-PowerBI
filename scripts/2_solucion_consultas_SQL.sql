@@ -16,7 +16,7 @@ SELECT
 FROM DESEMBOLSOS as d
 LEFT JOIN MAESTRA_PRODUCTOS AS mp
 	ON d.cod_producto = mp.cod_MP
-WHERE CAST(LEFT(CAST(d.periodo AS varchar),6) AS INT) BETWEEN  202301 AND 202312 
+WHERE d.periodo BETWEEN  202301 AND 202312 
       AND mp.es_activo = 1 
 GROUP BY mp.nombre
 ORDER BY MONTO_TOTAL DESC;
@@ -27,11 +27,11 @@ Considerar solo los clientes que pertenezcan a la zona LIMA y SUR.*/
 SELECT 
 	d.cod_cliente,
 	mp.nombre,
-	SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS varchar),4) AS INT) = 2020 THEN monto ELSE 0 END) AS [2020],
-	SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS varchar),4) AS INT) = 2021 THEN monto ELSE 0 END) AS [2021],
-	SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS varchar),4) AS INT) = 2022 THEN monto ELSE 0 END) AS [2022],
-	SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS varchar),4) AS INT) = 2023 THEN monto ELSE 0 END) AS [2023],
-	SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS varchar),4) AS INT) = 2024 THEN monto ELSE 0 END) AS [2024]
+	COALESCE(SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2020 THEN monto ELSE 0 END),0) AS [2020],
+	COALESCE(SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2021 THEN monto ELSE 0 END),0) AS [2021],
+	COALESCE(SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2022 THEN monto ELSE 0 END),0) AS [2022],
+	COALESCE(SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2023 THEN monto ELSE 0 END),0) AS [2023],
+	COALESCE(SUM(CASE WHEN CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2024 THEN monto ELSE 0 END),0) AS [2024]
 FROM DESEMBOLSOS AS d
 LEFT JOIN MAESTRA_PRODUCTOS AS mp
 	ON d.cod_producto = mp.cod_MP 
@@ -57,7 +57,7 @@ LEFT JOIN UBIGEO AS u
 WHERE CAST(RIGHT(CAST(d.periodo AS varchar),2) AS INT) BETWEEN 1 AND 7
 	  AND u.zona != 'ORIENTE'
 	  AND CAST(LEFT(CAST(d.periodo AS VARCHAR),4) AS INT) = 2024
-GROUP BY u.departamento,LEFT(CAST(d.periodo AS VARCHAR),4)
+GROUP BY u.departamento, LEFT(CAST(d.periodo AS VARCHAR),4)
 ORDER BY u.departamento, ANIO;
 GO 
 
@@ -68,14 +68,14 @@ WITH CTE_PERIODO_MAXIMO_2023 AS (
 		cod_cliente,
 		MAX(periodo) AS ultimo_periodo
 	FROM DESEMBOLSOS
-	WHERE LEFT(CAST(periodo AS varchar),4) = 2023
+	WHERE CAST(LEFT(CAST(periodo AS varchar),4) AS INT)  = 2023
 	GROUP BY cod_cliente
 ), CTE_MAX_ID_PERIODO AS (
 	SELECT
 		d.cod_cliente AS cod_cli,
 		MAX(d.ID) AS max_id
 	FROM DESEMBOLSOS as d
-	LEFT JOIN CTE_PERIODO_MAXIMO_2023 AS c
+	INNER JOIN CTE_PERIODO_MAXIMO_2023 AS c
 		ON c.cod_cliente = c.cod_cliente
 	WHERE d.periodo = c.ultimo_periodo
 	GROUP BY d.cod_cliente
