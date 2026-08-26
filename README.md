@@ -1,4 +1,4 @@
-# Analisi-de-Desembolsos-SQL_Server-PowerBI
+# Analisis-de-Desembolsos-SQL_Server-PowerBI
 Caso práctico basado en un escenario de desembolsos.
 ![Reporte gif guia](imagenes/GIF_REPORTE.gif)
 
