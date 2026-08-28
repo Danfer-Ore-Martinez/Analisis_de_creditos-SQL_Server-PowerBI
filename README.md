@@ -27,4 +27,4 @@ Vista general del reporte, se logran alcanzar los siguientes objetivos:
 - **Parámetros**: Uso de `Nuevo Parametro` para alternar entre métricas como `2020`,`2021`,`2022`,`2023` y `2024`, permitiendo la visualización dinámica en un mismo gráfico.
 - **Edición de Interacciones**: Se optimizan las interacciones entre las diferentes tablas con el objetivo de mejorar la dinámica y usabilidad del reporte, principalmente para limitar el filtro por año al grafico  `Desembolsos por Año`
 ## Sobre mi
-Buenos días, buenas tardes o buenas noches, dependiendo de cuando leas esto, soy un Estudiante de Ing. Sistemas mi nombre es Danfer Marcelo Ore, me quiero especializar en análisis de datos, este proyecto busca demostrar mi manejo en Power BI y SQL Server. (30/04/2026)
+Buenos días, buenas tardes o buenas noches, dependiendo de cuando leas esto, soy un Estudiante de Ing. Sistemas mi nombre es Danfer Marcelo Ore, este proyecto busca demostrar mi manejo en Power BI y SQL Server. (30/04/2026)
